@@ -11,10 +11,10 @@ I'd checked if tailwindcss worked or not and It works.
 After I finished I push the project into my github account.
 
 
-### `npm test`
+### display the data from 'utils' into the SideNav and make it stylish and add btn for switch the color mode
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I got the data from the 'utils' and put it in pretty manner in the SidNav.
+Thought I would be cool to add a btn for switching mood it's my first time to add and i was exiting I faced some problems like how to handle the state outside of its component but i passed it throughout the the App component as a props so if I need it in the future i can get it more easily. 
 
 ### `npm run build`
 
