@@ -39,7 +39,7 @@ function PokeCard({selectedPokemon}) {
             }catch (err) {
                 setError(err.message)
             } finally {
-                // setLoading(false)
+                setLoading(false)
             }
         }
         
@@ -56,7 +56,7 @@ function PokeCard({selectedPokemon}) {
 
 
     return(
-        <div className='ml-[25%] lg:ml-[300px] xl:ml-[350px] 2xl:ml-[380px]'>
+        <div className='m-4 md:ml-[25%] lg:ml-[300px] xl:ml-[350px] 2xl:ml-[380px]'>
             <span>{getFullPokedexNumber(selectedPokemon)}</span>
             <span>{name}</span>
             <div>
@@ -66,6 +66,7 @@ function PokeCard({selectedPokemon}) {
                     )
                 })}
             </div>
+            <img src={`/pokemon/${getFullPokedexNumber(selectedPokemon)}.png`} alt={`Image of ${name}`}/>
         </div>
     )
 }

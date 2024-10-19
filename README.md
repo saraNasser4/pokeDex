@@ -21,8 +21,9 @@ Thought I would be cool to add a btn for switching mood it's my first time to ad
 I got the data from the api and made sure that everything worked fine.
 One of the tricky parts was how to pass an object that has an object that has property as a props from PokeCard to TypeCard cuz React doesn't accept that kinda props.
 
-### 
+### Add a folder for the pokemon images 
 
+I added a folder for the pokemon images and render to the project 'still not stylish'.
 
 ## Learn More
 
