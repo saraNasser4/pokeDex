@@ -1,8 +1,8 @@
 import React from 'react'
 
-function TypeCard() {
+function TypeCard(props) {
   return (
-    <div>TypeCard</div>
+    <div>{props.type}</div>
   )
 }
 

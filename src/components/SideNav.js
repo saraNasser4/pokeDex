@@ -6,11 +6,15 @@ function SideNav (){
        <div>
           <h2 className='text-yellow-500 text-3xl lg:text-5xl font-bold mb-4'>Pokédex</h2>
        </div>
+       <div>
+          <input type='text' placeholder='fav pokédex waiting...' className='rounded-lg py-1.5 px-2 !mx-auto lg:px-4 dark:bg-neutral-900 ' />
+       </div>
+
       {first151Pokemon.map((poke, index)=> {
         return(
           <button key={index} className='flex gap-3 p-2 border-b [&>*]:dark:text-white border-b-white w-full cursor-default hover:bg-gray-300 dark:hover:bg-neutral-600 duration-200 font-semibold [&>*]:cursor-pointer [&>*]:text-center'>
             <span className='!font-normal text-gray-700'>{getFullPokedexNumber(index)}</span>
-            <h3 className=' text-gray-900'>{poke}</h3>
+            <h3 className='text-gray-900'>{poke}</h3>
           </button>
         )
       })}

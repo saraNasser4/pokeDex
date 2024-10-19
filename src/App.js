@@ -1,8 +1,8 @@
 import NightAndLight from './components/NightAndLight'
 import Header from './components/Header'
-import Modal from './components/Modal'
-import PokeCard from './components/PokeCard'
 import SideNav from './components/SideNav'
+import PokeCard from './components/PokeCard'
+import Modal from './components/Modal'
 import TypeCard from './components/TypeCard'
 
 import { useState } from "react"
@@ -11,25 +11,22 @@ function App() {
   const [state, setState] = useState(false);
   const toggleDarkMode = ()=>{
     setState(!state);
-    document.body.classList.toggle("dark");
-    if (state) {
-      document.body.classList.add("bg-white");
-      document.body.classList.remove("bg-neutral-950");
-    } else {
-      document.body.classList.remove("bg-white");
-      document.body.classList.add("bg-neutral-950");
-    }
-  
+    const isDarkMode = document.body.classList.toggle("dark");
+    document.body.classList.toggle("bg-white", !isDarkMode);
+    document.body.classList.toggle("bg-neutral-950", isDarkMode);
   } 
-  console.log(state)
+
+  const [selectedPokemon, setSelectedPokemon] = useState(0)
+  
+
 
   return (
     <>
       <NightAndLight state={state} toggleDarkMode={toggleDarkMode} />
       <Header />
+      <SideNav selectedPokemon={selectedPokemon} setSelectedPokemon={setSelectedPokemon} />
+      <PokeCard selectedPokemon={selectedPokemon} />
       <Modal />
-      <PokeCard />
-      <SideNav />
       <TypeCard />
     </>
   );

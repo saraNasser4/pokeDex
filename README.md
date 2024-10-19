@@ -16,25 +16,13 @@ After I finished I push the project into my github account.
 I got the data from the 'utils' and put it in pretty manner in the SidNav.
 Thought I would be cool to add a btn for switching mood it's my first time to add and i was exiting I faced some problems like how to handle the state outside of its component but i passed it throughout the the App component as a props so if I need it in the future i can get it more easily. 
 
-### `npm run build`
+### Working in PokeCard component and fetch the pokemon data from pokeAPI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I got the data from the api and made sure that everything worked fine.
+One of the tricky parts was how to pass an object that has an object that has property as a props from PokeCard to TypeCard cuz React doesn't accept that kinda props.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
