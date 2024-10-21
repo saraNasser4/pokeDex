@@ -25,7 +25,7 @@ One of the tricky parts was how to pass an object that has an object that has pr
 
 I added a folder for the pokemon images and render to the project 'still not stylish'.
 
-## Display the data form pokeAPI in PokeCard
+### Display the data form pokeAPI in PokeCard
 
 I started with adding the data first to the page and then I styled'em to made'em more suitable for dark and light mode.
 
@@ -35,7 +35,9 @@ I started with adding the data first to the page and then I styled'em to made'em
 Thought iit'd be butter to change the default style.
 
 
-### Analyzing the Bundle Size
+### Add functionality to Moves btns in PokeCard
+
+I made every btn when you click on it display description of that move and its name so you can understand what every move for.
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
