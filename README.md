@@ -39,7 +39,10 @@ Thought iit'd be butter to change the default style.
 
 I made every btn when you click on it display description of that move and its name so you can understand what every move for.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Debugging and finished PokeCard component
+
+I spent almost the entire day trying to figure it out in my code, and I finally did it in the first line of useEffect in PokeCard, where I'd written if the (data === true) return, but thank goodness it's all done now.
+
 
 ### Making a Progressive Web App
 

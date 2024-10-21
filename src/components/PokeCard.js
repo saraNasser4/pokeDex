@@ -22,7 +22,6 @@ function PokeCard({selectedPokemon}) {
 
         if(move in cache) {
             setSkill(cache[move]);
-            console.log("Found")
             return;
         }
 
@@ -50,7 +49,7 @@ function PokeCard({selectedPokemon}) {
     }
 
     useEffect(()=>{
-        if(loading || !localStorage || data) return;
+        if(loading || !localStorage) return;
 
         let cache = {}
         if(localStorage.getItem("pokedex")) {
@@ -65,12 +64,13 @@ function PokeCard({selectedPokemon}) {
         async function fetchPokemonData (){
             setLoading(true);
             try {
-                const dataUrl = `https://pokeapi.co/api/v2/pokemon/${getPokedexNumber(selectedPokemon)}`;
-                const res = await fetch(dataUrl);
+                let dataUrl = `https://pokeapi.co/api/v2/pokemon/${getPokedexNumber(selectedPokemon)}`;
+                let res = await fetch(dataUrl);
                 if (!res.ok) throw new Error('Failed to fetch data')
-                const pokemonData = await res.json();
+                let pokemonData = await res.json();
                 setData(pokemonData);
-                
+                console.log(dataUrl)
+
 
                 cache[selectedPokemon] = pokemonData;
                 localStorage.setItem('pokedex', JSON.stringify(cache))
@@ -83,6 +83,7 @@ function PokeCard({selectedPokemon}) {
         
         fetchPokemonData()
     }, [selectedPokemon])
+    console.log(data)
     
     if(loading || !data) {
         return(
@@ -95,14 +96,15 @@ function PokeCard({selectedPokemon}) {
 
     return(
         <div className='m-4 p-4 md:ml-[25%] lg:ml-[300px] xl:ml-[350px] 2xl:ml-[380px] dark:text-white'>
+
             {skill && (<Modal handleCloseModal={()=> { setSkill(null) }}>
                 <div className='flex gap-3 text-lg md:text-xl my-5'>
-                    <h6 className='font-bold'>Name:</h6>
-                    <h2>{skill.move}</h2>
+                    <h2 className='font-bold'>Name:</h2>
+                    <h6 className='capitalize'>{skill.move.replaceAll('-', ' ')}</h6>
                 </div>
                 <div className='flex gap-3 text-lg md:text-xl my-5'>
-                    <h6 className='font-bold'>Description: </h6>
-                    <h2>{skill.description}</h2>
+                    <h2 className='font-bold'>Description: </h2>
+                    <h6>{skill.description}</h6>
                 </div>
             </Modal>)
             }

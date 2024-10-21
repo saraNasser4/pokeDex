@@ -1,6 +1,6 @@
 import { first151Pokemon, getFullPokedexNumber } from '../utils'
 
-function SideNav (){
+function SideNav (props){
   return (
     <nav className='hidden md:block bg-gray-200 dark:bg-neutral-700 fixed top-0 left-0 bottom-0 w-[25%] max-w-[380px] h-screen overflow-y-scroll overflow-x-hidden p-4 scrollbar'>
        <div>
@@ -12,7 +12,7 @@ function SideNav (){
 
       {first151Pokemon.map((poke, index)=> {
         return(
-          <button key={index} className='flex gap-3 p-2 border-b [&>*]:dark:text-white border-b-white w-full cursor-default hover:bg-gray-300 dark:hover:bg-neutral-600 duration-200 font-semibold [&>*]:cursor-pointer [&>*]:text-center'>
+          <button key={index} onClick={()=> props.setSelectedPokemon(index)} className={`flex gap-3 p-2 border-b [&>*]:dark:text-white border-b-white w-full cursor-default hover:bg-gray-300 dark:hover:bg-neutral-600 duration-200 font-semibold [&>*]:cursor-pointer [&>*]:text-center ${props.selectedPokemon === index ? ' bg-gray-300 dark:bg-neutral-600 ':' '}`}>
             <span className='!font-normal text-gray-700'>{getFullPokedexNumber(index)}</span>
             <h3 className='text-gray-900'>{poke}</h3>
           </button>

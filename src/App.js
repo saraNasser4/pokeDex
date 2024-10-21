@@ -18,7 +18,6 @@ function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(0)
   
 
-
   return (
     <>
       <NightAndLight state={state} toggleDarkMode={toggleDarkMode} />
