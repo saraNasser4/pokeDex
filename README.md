@@ -25,15 +25,14 @@ One of the tricky parts was how to pass an object that has an object that has pr
 
 I added a folder for the pokemon images and render to the project 'still not stylish'.
 
-## Learn More
+## Display the data form pokeAPI in PokeCard
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I started with adding the data first to the page and then I styled'em to made'em more suitable for dark and light mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
 
 ### Analyzing the Bundle Size
 
