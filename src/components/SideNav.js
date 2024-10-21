@@ -2,7 +2,7 @@ import { first151Pokemon, getFullPokedexNumber } from '../utils'
 
 function SideNav (){
   return (
-    <nav className='hidden md:block bg-gray-200 dark:bg-neutral-700 fixed top-0 left-0 bottom-0 w-[25%] max-w-[380px] h-screen overflow-y-scroll overflow-x-hidden p-4'>
+    <nav className='hidden md:block bg-gray-200 dark:bg-neutral-700 fixed top-0 left-0 bottom-0 w-[25%] max-w-[380px] h-screen overflow-y-scroll overflow-x-hidden p-4 scrollbar'>
        <div>
           <h2 className='text-yellow-500 text-3xl lg:text-5xl font-bold mb-4'>Pokédex</h2>
        </div>

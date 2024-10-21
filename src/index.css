@@ -5,3 +5,24 @@
 * {
     @apply transition-colors duration-200;
 }
+
+/* For Firefox Browser */
+.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #171717 #fff;
+    scroll-snap-align: 50%;
+  }
+  
+  
+  /* For Chrome, EDGE, Opera, Others */
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  .scrollbar::-webkit-scrollbar-track { 
+    background: #fff;
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb { 
+    background:#171717;
+  }

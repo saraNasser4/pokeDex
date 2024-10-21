@@ -30,8 +30,9 @@ I added a folder for the pokemon images and render to the project 'still not sty
 I started with adding the data first to the page and then I styled'em to made'em more suitable for dark and light mode.
 
 
-### 
+### Add some style for the SideNav's scrollbar
 
+Thought iit'd be butter to change the default style.
 
 
 ### Analyzing the Bundle Size
