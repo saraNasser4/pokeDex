@@ -45,13 +45,12 @@ I spent almost the entire day trying to figure it out in my code, and I finally 
 There was another bug in that component which is if you click on some moves btn it will give an emptiy description cuz some of them didn't have 'text_flavor' and that is the part where the description comes from so I made it to check first if there's 'text_flavor' or not and if not I made a default massage.
 
 
-### Making a Progressive Web App
+### Mada the search input dynamic in SideNav component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+That was my first time make a dynamic searchbar and I thought it would've been harder then that but It works pretty well with filter method.
+The problems I faced here were how to get the right index from the 'utils folder' and the new index of the list that contain the filtered name.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 
 
 ### Deployment
 
