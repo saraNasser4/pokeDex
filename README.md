@@ -16,14 +16,17 @@ After I finished I push the project into my github account.
 I got the data from the 'utils' and put it in pretty manner in the SidNav.
 Thought I would be cool to add a btn for switching mood it's my first time to add and i was exiting I faced some problems like how to handle the state outside of its component but i passed it throughout the the App component as a props so if I need it in the future i can get it more easily. 
 
+
 ### Working in PokeCard component and fetch the pokemon data from pokeAPI
 
 I got the data from the api and made sure that everything worked fine.
 One of the tricky parts was how to pass an object that has an object that has property as a props from PokeCard to TypeCard cuz React doesn't accept that kinda props.
 
+
 ### Add a folder for the pokemon images 
 
 I added a folder for the pokemon images and render to the project 'still not stylish'.
+
 
 ### Display the data form pokeAPI in PokeCard
 
@@ -39,6 +42,7 @@ Thought iit'd be butter to change the default style.
 
 I made every btn when you click on it display description of that move and its name so you can understand what every move for.
 
+
 ### Debugging and finished PokeCard component
 
 I spent almost the entire day trying to figure it out in my code, and I finally did it in the first line of useEffect in PokeCard, where I'd written if the (data === true) return, but thank goodness it's all done now.
@@ -50,12 +54,8 @@ There was another bug in that component which is if you click on some moves btn 
 That was my first time make a dynamic searchbar and I thought it would've been harder then that but It works pretty well with filter method.
 The problems I faced here were how to get the right index from the 'utils folder' and the new index of the list that contain the filtered name.
 
-### 
 
-### Deployment
+### Create the Header and final touch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Create the Header component and made it responsive and stylish.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

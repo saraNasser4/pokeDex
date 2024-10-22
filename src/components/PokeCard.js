@@ -50,7 +50,6 @@ function PokeCard({selectedPokemon}) {
         } finally {
             setLoadingSkill(false)
         }
-
     }
 
     useEffect(()=>{
@@ -75,7 +74,6 @@ function PokeCard({selectedPokemon}) {
                 let pokemonData = await res.json();
                 setData(pokemonData);
 
-
                 cache[selectedPokemon] = pokemonData;
                 localStorage.setItem('pokedex', JSON.stringify(cache))
             }catch (err) {
@@ -92,7 +90,7 @@ function PokeCard({selectedPokemon}) {
     if(loading || !data) {
         return(
             <div className='w-[100%] h-[100%]'>
-                <h4>Loading...</h4>
+                <h4 className='text-4xl md:text-6xl font-semibold'>Loading...</h4>
             </div>
         )
     }
