@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { first151Pokemon, getFullPokedexNumber } from '../utils'
-import { HiArrowLeft } from "react-icons/hi";
 
 
 function SideNav (props){
