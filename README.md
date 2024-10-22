@@ -42,6 +42,7 @@ I made every btn when you click on it display description of that move and its n
 ### Debugging and finished PokeCard component
 
 I spent almost the entire day trying to figure it out in my code, and I finally did it in the first line of useEffect in PokeCard, where I'd written if the (data === true) return, but thank goodness it's all done now.
+There was another bug in that component which is if you click on some moves btn it will give an emptiy description cuz some of them didn't have 'text_flavor' and that is the part where the description comes from so I made it to check first if there's 'text_flavor' or not and if not I made a default massage.
 
 
 ### Making a Progressive Web App

@@ -29,8 +29,13 @@ function PokeCard({selectedPokemon}) {
             setLoadingSkill(true)
             const res = await fetch(moveUrl);
             if (!res.ok) throw new Error('Failed to fetch move data')
+            
             const moveData = await res.json();
-            const description = moveData?.flavor_text_entries.filter(val => val.version_group.name = 'firered_leafgreen')[0]?.flavor_text;
+            
+            const description = moveData?.flavor_text_entries.length > 1 ? 
+                moveData?.flavor_text_entries.filter(val => val.language.name === 'en')[0].flavor_text :
+                "There's no word to describe it";
+        
             const skillData = {
                 move,
                 description
@@ -69,7 +74,6 @@ function PokeCard({selectedPokemon}) {
                 if (!res.ok) throw new Error('Failed to fetch data')
                 let pokemonData = await res.json();
                 setData(pokemonData);
-                console.log(dataUrl)
 
 
                 cache[selectedPokemon] = pokemonData;
@@ -83,11 +87,11 @@ function PokeCard({selectedPokemon}) {
         
         fetchPokemonData()
     }, [selectedPokemon])
-    console.log(data)
+
     
     if(loading || !data) {
         return(
-            <div>
+            <div className='w-[100%] h-[100%]'>
                 <h4>Loading...</h4>
             </div>
         )
